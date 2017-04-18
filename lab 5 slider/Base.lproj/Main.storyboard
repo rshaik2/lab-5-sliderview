@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="91D-Kf-7lH">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bmF-xf-jSt">
+            <objects>
+                <viewController id="91D-Kf-7lH" customClass="ViewController" customModule="RiyazLAB5SliderTableview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bU4-nA-he4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fzh-eV-KnN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zEQ-Bo-4uJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFX-B7-MuL">
+                                <rect key="frame" x="0.0" y="282" width="414" height="454"/>
+                                <color key="backgroundColor" red="0.1935199729" green="0.0" blue="0.88821648320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="454" id="wPB-EG-tLq"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="91D-Kf-7lH" id="lSr-8s-4sd"/>
+                                    <outlet property="delegate" destination="91D-Kf-7lH" id="R6e-8g-3zN"/>
+                                </connections>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jyx-Yh-Ra5">
+                                <rect key="frame" x="92" y="78" width="229" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jyx-Yh-Ra5" firstAttribute="top" secondItem="bU4-nA-he4" secondAttribute="bottom" constant="58" id="8yB-Ta-yW0"/>
+                            <constraint firstItem="rFX-B7-MuL" firstAttribute="leading" secondItem="zEQ-Bo-4uJ" secondAttribute="leading" id="Eqd-LX-TPd"/>
+                            <constraint firstItem="Jyx-Yh-Ra5" firstAttribute="centerX" secondItem="rFX-B7-MuL" secondAttribute="centerX" id="JjR-Gr-ocE"/>
+                            <constraint firstAttribute="trailing" secondItem="rFX-B7-MuL" secondAttribute="trailing" id="iYG-MP-VaU"/>
+                            <constraint firstItem="Jyx-Yh-Ra5" firstAttribute="leading" secondItem="zEQ-Bo-4uJ" secondAttribute="leadingMargin" constant="74" id="k0q-36-TTS"/>
+                            <constraint firstItem="rFX-B7-MuL" firstAttribute="bottom" secondItem="Fzh-eV-KnN" secondAttribute="top" id="x7a-4N-wKv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTableview" destination="rFX-B7-MuL" id="ocA-1w-DMO"/>
+                        <outlet property="myslider" destination="Jyx-Yh-Ra5" id="RWj-9Z-Mlv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9p-9C-J27" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
